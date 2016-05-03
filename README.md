@@ -34,6 +34,7 @@ Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold v
 All Customers managed in Cube is linked to an Assignment.
 All Responses managed in Cube is linked to a Campaign.
 
+[Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md)
 
 ## Importing data from CRM into Cube
 For now, imports of customer records from various CRM solutions is done by the user of the CRM system with Excel spreadsheets. The Excel import is very flexible and can support any model. We are looking into implementing more CRM specific import integrations (e.g. Microsoft Dynamics, Siebel etc.), so please feel free to contact support@headshed.no if you have a specific need, and we will look into it.
