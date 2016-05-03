@@ -12,7 +12,7 @@ https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
 
 The `include_inactive_campaigns `parameter is optional and will be set to False of not included. (i.e. retrieving only active campaigns)
 
-### Example response:
+#### Example response:
 ```json  
 {
     {   "campaign_id": 1,
@@ -45,7 +45,7 @@ https://YOURACCOUNT.cube4sales.com/assignments
 ```
 > HTTP Response: 200 OK
 
-### Example response:
+#### Example response:
 ```json  
 {
     {   "assignment_id": 32,
