@@ -33,8 +33,8 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 ## Example
 This is an example of how you can use the API's to retrieve updated response- and customer data from Cube.
 
-1. Get the campaign- and assignment id's you want to retrieve data for. Use the [Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md)
-2. Iterate over the list of Campaigns you want to see, gather the Response information you are looking for using the [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
-3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API] (https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md). You will need the assignment_id. The records will match on ` customer_id ``
+1. Get the campaign- and assignment id's you want to retrieve data for. You can find this in the Cube web-application, or you can use the [Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md) to look them up.
+2. Iterate the list of Campaigns you want to see, gather the Response information you are looking for using the [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API] (https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md). You will need the assignment_id. The records will match on ` customer_id `
 4. Transform and store the updated data in your CRM system
 
