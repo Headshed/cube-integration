@@ -1,6 +1,9 @@
 ##Services related to Clients, Assignments and Campaigns
 
+### Campaigns API
+
 The following request can be used to get information about Campaigns in Cube:
+
 GET
 ```
 https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
@@ -33,7 +36,9 @@ The `include_inactive_campaigns `parameter is optional and will be set to False 
 }
   ```
 
+### Assignments API
 The following request can be used to get information about Assignments in Cube:
+
 GET
 ```
 https://YOURACCOUNT.cube4sales.com/assignments
