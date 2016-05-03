@@ -28,12 +28,50 @@ Your authentication string is a base64 encoded version of your credentials. You 
 Or in JavaScript:
 `btoa("myemail@example.com:password")`
 
+
+## Clients, Assignments and Campaigns
+Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold various parts of the configuration.
+All Customers managed in Cube is linked to an Assignment.
+All Responses managed in Cube is linked to a Campaign.
+
+The following post can be used to get information about Campaigns in Cube:
+GET
+```
+https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
+```
+> HTTP Response: 200 OK
+
+The `include_inactive_campaigns `parameter is optional and will be set to False of not included. (i.e. retrieving only active campaigns)
+
+### Example response:
+```json  
+{
+    {   "campaign_id": 1,
+        "campaign_name": "My First Campaign",
+        "start_date": "2016-04-07",
+        "end_date": "",
+        "assignment_id": 32,
+        "assignment_name": "My Assignment number one",
+        "client_id": 42,
+        "client_name": "My best Client",
+    }
+    {   "campaign_id": 2,
+        "campaign_name": "My Second Campaign",
+        "start_date": "2016-05-07",
+        "end_date": "2016-12-24",
+        "assignment_id": 32,
+        "assignment_name": "My Assignment number one",
+        "client_id": 42,
+        "client_name": "My best Client",
+    }
+}
+  ```
+
 ## Importing data from CRM into Cube
 For now, imports of customer records from various CRM solutions is done by the user of the CRM system with Excel spreadsheets. The Excel import is very flexible and can support any model. We are looking into implementing more CRM specific import integrations (e.g. Microsoft Dynamics, Siebel etc.), so please feel free to contact support@headshed.no if you have a specific need, and we will look into it.
 
 ## Recieving updated CRM records from Cube
-In a typical use-case scenario, Cube is used to register all contact with a customer. Whild doig this, the Cube user can update the Customer information in Cube with e.g. a new phone number, email address, changed last name etc.
-Extra information may also be configured and updated in the customer.
+In a typical use-case scenario, Cube is used to register all contact with a customer. When in contact with the customer, the Cube user can update the Customer information in Cube with e.g. a new phone number, email address, changed last name etc.
 
 The following post can be used to get Customer data from Cube:
 GET
@@ -104,11 +142,11 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 The following request can be used to get response data from Cube:
 GET
 ```
-https://YOURACCOUNT.cube4sales.com/responses?from=YYYYMMDD&to=YYYYMMDD
+https://YOURACCOUNT.cube4sales.com/responses?campaign_id={ID}&from={YYYYMMDD}&to={YYYYMMDD}
 ```
 > HTTP Response: 200 OK
+` campaign_id={ID} ` and ` from={YYYYMMDD} ` are mandatory.
 The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
-You can also add an optional ` campaign_id={ID} ` argument if you want to limit the responses to only one campaign.
 
 ## Example
 (Add image to show configuration)
@@ -116,66 +154,31 @@ You can also add an optional ` campaign_id={ID} ` argument if you want to limit 
 
 ```json  
 {
-"campaign_entry": {
-        "client_name": "My Client Name",
-        "client_id": 2,
-        "assignment_name": "My Assignment Name",
-        "assignment_id": 3,
-        "campaign_name": "My Campaign Name",
-        "campaign_id": 32,
-        "response_entry": {
-            "customer_id": 2488539,
-            "name": "Lastname, Firstname",
-            "updated": "2016-04-07",
-            "updated_by": "magnus@headshed.no",
-            "update_method": "Import new",
-            "org_number": "989898981",
-            "org_name": "Company GBH",
-        }
-        "response_entry": {
-            "customer_id": 2488538,
-            "name": "AnotherLastname, AnotherFirstname",
-            "updated": "2016-04-07",
-            "updated_by": "magnus@headshed.no",
-            "update_method": "Import new",
-            "org_number": "777777777",
-            "org_name": "Company AS",
-        }
-        "response_entry": {
-            "customer_id": 2488537,
-            "name": "YetAnotherLastname, YetAnotherFirstname",
-            "updated": "2016-04-07",
-            "updated_by": "magnus@headshed.no",
-            "update_method": "Import new",
-            "org_number": "555555555",
-            "org_name": "Company INC",
-        }    
+    {   "customer_id": 2488539,
+        "name": "Lastname, Firstname",
+        "updated": "2016-04-07",
+        "updated_by": "magnus@headshed.no",
+        "update_method": "Import new",
+        "org_number": "989898981",
+        "org_name": "Company GBH",
     }
-    "campaign_entry": {
-        "client_name": "My Client Name",
-        "client_id": 2,
-        "assignment_name": "My Assignment Name",
-        "assignment_id": 3,
-        "campaign_name": "Another Campaign Name",
-        "campaign_id": 33,
-        "response_entry": {
-            "customer_id": 5488539,
-            "name": "Lastname, Firstname",
-            "updated": "2016-04-07",
-            "updated_by": "magnus@headshed.no",
-            "update_method": "Import new",
-            "org_number": "779898981",
-            "org_name": "Company XYX",
-        }
-        "response_entry": {
-            "customer_id": 762488538,
-            "name": "AnotherLastname, AnotherFirstname",
-            "updated": "2016-04-07",
-            "updated_by": "magnus@headshed.no",
-            "update_method": "Import new",
-            "org_number": "222222222",
-            "org_name": "Company ABC",
-        }
+    {
+        "customer_id": 2488538,
+        "name": "AnotherLastname, AnotherFirstname",
+        "updated": "2016-04-07",
+        "updated_by": "magnus@headshed.no",
+        "update_method": "Import new",
+        "org_number": "777777777",
+        "org_name": "Company AS",
     }
+    {
+        "customer_id": 2488537,
+        "name": "YetAnotherLastname, YetAnotherFirstname",
+        "updated": "2016-04-07",
+        "updated_by": "magnus@headshed.no",
+        "update_method": "Import new",
+        "org_number": "555555555",
+        "org_name": "Company INC",
+    }    
 }
   ```
