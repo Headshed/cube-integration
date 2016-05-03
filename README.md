@@ -34,66 +34,6 @@ Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold v
 All Customers managed in Cube is linked to an Assignment.
 All Responses managed in Cube is linked to a Campaign.
 
-The following request can be used to get information about Campaigns in Cube:
-GET
-```
-https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
-```
-> HTTP Response: 200 OK
-
-The `include_inactive_campaigns `parameter is optional and will be set to False of not included. (i.e. retrieving only active campaigns)
-
-### Example response:
-```json  
-{
-    {   "campaign_id": 1,
-        "campaign_name": "My First Campaign",
-        "start_date": "2016-04-07",
-        "end_date": "",
-        "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-    {   "campaign_id": 2,
-        "campaign_name": "My Second Campaign",
-        "start_date": "2016-05-07",
-        "end_date": "2016-12-24",
-        "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-}
-  ```
-
-The following request can be used to get information about Assignments in Cube:
-GET
-```
-https://YOURACCOUNT.cube4sales.com/assignments
-```
-> HTTP Response: 200 OK
-
-### Example response:
-```json  
-{
-    {   "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-    {   "assignment_id": 33,
-        "assignment_name": "My Assignment number two",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-    {   "assignment_id": 72,
-        "assignment_name": "My Special Assignment",
-        "client_id": 44,
-        "client_name": "My second best Client",
-    }    
-}
-```
 
 ## Importing data from CRM into Cube
 For now, imports of customer records from various CRM solutions is done by the user of the CRM system with Excel spreadsheets. The Excel import is very flexible and can support any model. We are looking into implementing more CRM specific import integrations (e.g. Microsoft Dynamics, Siebel etc.), so please feel free to contact support@headshed.no if you have a specific need, and we will look into it.
