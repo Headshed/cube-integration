@@ -34,7 +34,7 @@ Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold v
 All Customers managed in Cube is linked to an Assignment.
 All Responses managed in Cube is linked to a Campaign.
 
-The following post can be used to get information about Campaigns in Cube:
+The following request can be used to get information about Campaigns in Cube:
 GET
 ```
 https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
@@ -67,13 +67,41 @@ The `include_inactive_campaigns `parameter is optional and will be set to False 
 }
   ```
 
+The following request can be used to get information about Assignments in Cube:
+GET
+```
+https://YOURACCOUNT.cube4sales.com/assignments
+```
+> HTTP Response: 200 OK
+
+### Example response:
+```json  
+{
+    {   "assignment_id": 32,
+        "assignment_name": "My Assignment number one",
+        "client_id": 42,
+        "client_name": "My best Client",
+    }
+    {   "assignment_id": 33,
+        "assignment_name": "My Assignment number two",
+        "client_id": 42,
+        "client_name": "My best Client",
+    }
+    {   "assignment_id": 72,
+        "assignment_name": "My Special Assignment",
+        "client_id": 44,
+        "client_name": "My second best Client",
+    }    
+}
+```
+
 ## Importing data from CRM into Cube
 For now, imports of customer records from various CRM solutions is done by the user of the CRM system with Excel spreadsheets. The Excel import is very flexible and can support any model. We are looking into implementing more CRM specific import integrations (e.g. Microsoft Dynamics, Siebel etc.), so please feel free to contact support@headshed.no if you have a specific need, and we will look into it.
 
 ## Recieving updated CRM records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. When in contact with the customer, the Cube user can update the Customer information in Cube with e.g. a new phone number, email address, changed last name etc.
 
-The following post can be used to get Customer data from Cube:
+The following request can be used to get Customer data from Cube:
 GET
 ```
 https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ID}
