@@ -98,3 +98,84 @@ For other customer data, all fields are shown (with `null` values when no data i
     "Hoved": "Ja"
   },
   ```
+## Recieving updated Response-records from Cube
+In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of extra response information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
+
+The following request can be used to get response data from Cube:
+GET
+```
+https://YOURACCOUNT.cube4sales.com/responses?from=YYYYMMDD&to=YYYYMMDD
+```
+> HTTP Response: 200 OK
+The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
+You can also add an optional ` campaign_id={ID} ` argument if you want to limit the responses to only one campaign.
+
+## Example
+(Add image to show configuration)
+### Example response:
+
+```json  
+{
+"campaign_entry": {
+        "client_name": "My Client Name",
+        "client_id": 2,
+        "assignment_name": "My Assignment Name",
+        "assignment_id": 3,
+        "campaign_name": "My Campaign Name",
+        "campaign_id": 32,
+        "response_entry": {
+            "customer_id": 2488539,
+            "name": "Lastname, Firstname",
+            "updated": "2016-04-07",
+            "updated_by": "magnus@headshed.no",
+            "update_method": "Import new",
+            "org_number": "989898981",
+            "org_name": "Company GBH",
+        }
+        "response_entry": {
+            "customer_id": 2488538,
+            "name": "AnotherLastname, AnotherFirstname",
+            "updated": "2016-04-07",
+            "updated_by": "magnus@headshed.no",
+            "update_method": "Import new",
+            "org_number": "777777777",
+            "org_name": "Company AS",
+        }
+        "response_entry": {
+            "customer_id": 2488537,
+            "name": "YetAnotherLastname, YetAnotherFirstname",
+            "updated": "2016-04-07",
+            "updated_by": "magnus@headshed.no",
+            "update_method": "Import new",
+            "org_number": "555555555",
+            "org_name": "Company INC",
+        }    
+    }
+    "campaign_entry": {
+        "client_name": "My Client Name",
+        "client_id": 2,
+        "assignment_name": "My Assignment Name",
+        "assignment_id": 3,
+        "campaign_name": "Another Campaign Name",
+        "campaign_id": 33,
+        "response_entry": {
+            "customer_id": 5488539,
+            "name": "Lastname, Firstname",
+            "updated": "2016-04-07",
+            "updated_by": "magnus@headshed.no",
+            "update_method": "Import new",
+            "org_number": "779898981",
+            "org_name": "Company XYX",
+        }
+        "response_entry": {
+            "customer_id": 762488538,
+            "name": "AnotherLastname, AnotherFirstname",
+            "updated": "2016-04-07",
+            "updated_by": "magnus@headshed.no",
+            "update_method": "Import new",
+            "org_number": "222222222",
+            "org_name": "Company ABC",
+        }
+    }
+}
+  ```
