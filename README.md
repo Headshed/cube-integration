@@ -1,11 +1,13 @@
 #Integration with Cube (WORK IN PROGRESS)
 
-This is how you integrate with Cube, delivered by [Headshed](http://www.headshed.no)
+This is how you integrate with the Cube REST API. 
+Cube is delivered by [Headshed AS](http://www.headshed.no).
 
 ## Authentication and Headers
 
-Cube supports Basic Authentication and JSON format.
-[Authentication and Headers] (https://github.com/Headshed/cube-integration/blob/master/AuthenticationAndHeaders.md)
+Cube supports Basic Authentication and provides data in JSON format.
+
+See [Authentication and Headers] (https://github.com/Headshed/cube-integration/blob/master/AuthenticationAndHeaders.md) for details on setting up Authentication and correct request headers.
 
 ## Clients, Assignments and Campaigns
 Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold various parts of the configuration.
@@ -26,4 +28,13 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of extra response information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
 
 [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+
+
+## Example
+This is an example of how you can use the API's to retrieve updated response- and customer data from Cube.
+
+1. Get the campaign- and assignment id's you want to retrieve data for. Use the [Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md)
+2. Iterate over the list of Campaigns you want to see, gather the Response information you are looking for using the [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API] (https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md). You will need the assignment_id. The records will match on ` customer_id ``
+4. Transform and store the updated data in your CRM system
 
