@@ -6,20 +6,22 @@ Cube is delivered by [Headshed AS](http://www.headshed.no).
 ## Authentication and Headers
 
 Cube supports Basic Authentication and provides data in JSON format.
+_We will soon support token based authentication, and are open to implement other authentication methods upon client request._
 
 See [Authentication and Headers] (https://github.com/Headshed/cube-integration/blob/master/AuthenticationAndHeaders.md) for details on setting up Authentication and correct request headers.
 
 ## Clients, Assignments and Campaigns
 Cube operates with a hierarchy of Clients, Assignments and Campaigns that hold various parts of the configuration.
 All Customers managed in Cube is linked to an Assignment.
-All Responses managed in Cube is linked to a Campaign.
+All Responses managed in Cube is linked to a Customer and Campaign.
 
 [Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md)
 
-## Importing data from CRM into Cube
-Imports of customer records from various CRM solutions can be done by the user of the CRM system via Excel spreadsheets. The Excel import is very flexible and can support any model.(e.g. Microsoft Dynamics, Siebel, SAP etc.).
-Customer records can also be imported via the REST API.
+## Importing customer data from _any_ CRM into Cube
+Customer records can be imported via the REST API for CRM data.
 [Update Customer data API] (https://github.com/Headshed/cube-integration/blob/master/UpdateCustomerDataAPI.md)
+
+Imports of customer records from various CRM solutions can be done by the user of the CRM system via Excel spreadsheets. The Excel import is very flexible and can support any model.(e.g. Microsoft Dynamics, Siebel, SAP etc.).
 
 
 ## Recieving updated CRM records from Cube
