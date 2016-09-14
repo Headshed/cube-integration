@@ -20,7 +20,7 @@ The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
         "update_method": "Import new",
         "org_number": "989898981",
         "org_name": "Company GBH",
-        "response_type": 'Scheduled call",
+        "response_type": "Scheduled call",
         "scheduled_call_due_date": "28.02.2015",
         "comment": "Customer wanted to be contacted again nest week. Need to discuss offer with his CEO",
     }
@@ -43,8 +43,8 @@ The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
         "update_method": "Import new",
         "org_number": "555555555",
         "org_name": "Company INC",
-        "response_type": 'Completed without action",
-        "response_alternative": 'Ingen ansatte å forsikre",
+        "response_type": "Completed without action",
+        "response_alternative": "Ingen ansatte å forsikre",
         "comment": "Customer do not want to be contacted about this again",
     }    
 }
