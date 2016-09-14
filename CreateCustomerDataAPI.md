@@ -1,6 +1,6 @@
 ## Customer data API - Creating customer records.
 The following request can be used to create Customer data records in Cube:
-#### POST ```https://YOURACCOUNT.cube4sales.com/crm/customers```
+__POST__ ```https://YOURACCOUNT.cube4sales.com/crm/customers```
 To create a new customer record, you need to POST the following parameters. Mandatory parameters have a * next to them.
 | Parameter     | Description   |
 | ------------- |:-------------:|
