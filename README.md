@@ -18,16 +18,19 @@ All Responses managed in Cube is linked to a Customer and Campaign.
 [Clients-Assignments-Campaigns API] (https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md)
 
 ## Importing customer data from _any_ CRM into Cube
-Customer records can be imported via the REST API for CRM data.
-[Update Customer data API] (https://github.com/Headshed/cube-integration/blob/master/UpdateCustomerDataAPI.md)
+Customer records are imported into an Assignment, and Customer records can be imported via the REST API for CRM data. We have a flexible/extensible data model where you can configure any extra information fields you want to use.
+[Customer data API] (CustomerDataAPI.md)
 
-Imports of customer records from various CRM solutions can be done by the user of the CRM system via Excel spreadsheets. The Excel import is very flexible and can support any model.(e.g. Microsoft Dynamics, Siebel, SAP etc.).
+Imports of customer records from various CRM solutions can also be done in the Cube web application by the user of the CRM system via Excel spreadsheets. As mentioned, the import is very flexible and can support any model.(e.g. data from Microsoft Dynamics, Siebel, SAP, Hubspot etc.).
 
+## Updating customer data from _any_ CRM into Cube
+If you have updated CRM records you want the users in Cube to know about, you can update Customer records wia the API.
+[Customer data API] (CustomerDataAPI.md)
 
 ## Recieving updated CRM records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. When in contact with the customer, the Cube user can update the Customer information in Cube with e.g. a new phone number, email address, changed last name etc.
 
-[Read Customer data API] (https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md)
+[Customer data API] (CustomerDataAPI.md)
 
 ## Recieving updated Response-records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of extra response information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
