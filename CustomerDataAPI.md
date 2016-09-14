@@ -7,8 +7,8 @@ To create a new customer record, you need to POST the following parameters. Mand
 
 | Parameter     | Description |
 | ------------- |-------------|
-| customer_id   | A unique customer ID (typically the id from your CRM system |
-| assignment_id | The id of the assignment where the customer should be placed |
+| customer_id *  | A unique customer ID (typically the id from your CRM system |
+| assignment_id * | The id of the assignment where the customer should be placed |
 | name          | Name of the customer |
 | etc..         | We have a lot of fields - will add them later |
 
