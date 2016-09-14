@@ -32,7 +32,7 @@ The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
         "update_method": "Response",
         "org_number": "777777777",
         "org_name": "Company AS",
-        "response_type": 'Completed with action",
+        "response_type": "Completed with action",
         "comment": "Meeting accepted",
     }
     {
