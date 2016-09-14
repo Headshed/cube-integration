@@ -1,4 +1,4 @@
-## Customer data API
+## Customer data API - Retrieving updated customer data.
 The following request can be used to get Customer data from Cube:
 GET
 ```
@@ -7,11 +7,11 @@ https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ID}
 > HTTP Response: 200 OK
 
 ## Example
-In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in Cube. (TODO. Add REST API for listing Assignments)
+In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
 Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
 (Add image to show configuration)
-In the customer record shown below, only 3 if the assignment specific fields have data registered, and hence only these are displayed/included.
-For other customer data, all fields are shown (with `null` values when no data is registered)
+In the customer record shown below, only 3 of the assignment specific fields have data registered, and hence only these are displayed/included in the response.
+For standard customer data fields, the fields are shown (with `null` values when no data is registered)
 
 ### Example response:
 
