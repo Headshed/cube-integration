@@ -1,14 +1,14 @@
 The following request can be used to get response data from Cube:
-GET
-```
-https://YOURACCOUNT.cube4sales.com/responses?campaign_id={ID}&from={YYYYMMDD}&to={YYYYMMDD}
-```
+
+**GET** ```https://YOURACCOUNT.cube4sales.com/responses?campaign_id={ID}&from={YYYYMMDD}&to={YYYYMMDD}```
+
 > HTTP Response: 200 OK
+
 ` campaign_id={ID} ` and ` from={YYYYMMDD} ` are mandatory.
 The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
 
 ## Example
-(Add image to show configuration)
+(Add image to show configuration of this reponse setup in Cube)
 ### Example response:
 
 ```json  
@@ -17,12 +17,12 @@ The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
         "name": "Lastname, Firstname",
         "updated": "2016-04-07",
         "updated_by": "magnus@headshed.no",
-        "update_method": "Import new",
+        "update_method": "Response",
         "org_number": "989898981",
         "org_name": "Company GBH",
         "response_type": "Scheduled call",
         "scheduled_call_due_date": "28.02.2015",
-        "comment": "Customer wanted to be contacted again nest week. Need to discuss offer with his CEO",
+        "comment": "Customer wanted to be contacted again next week. Need to discuss offer with his CEO",
     }
     {
         "customer_id": 2488538,
@@ -40,7 +40,7 @@ The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
         "name": "YetAnotherLastname, YetAnotherFirstname",
         "updated": "2016-04-07",
         "updated_by": "magnus@headshed.no",
-        "update_method": "Import new",
+        "update_method": "Response",
         "org_number": "555555555",
         "org_name": "Company INC",
         "response_type": "Completed without action",
