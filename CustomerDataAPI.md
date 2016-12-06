@@ -1,5 +1,6 @@
 ## Customer data API - Retrieving a single customer record.
 The following request can be used to get Customer data from Cube:
+
 **GET** ```https://YOURACCOUNT.cube4sales.com/crm/customer/?assignment_id={ASSIGNMENT_ID}&customer_id={CUSTOMER_ID}```
 
 The assignment_id and customer_id must be integers
@@ -37,12 +38,14 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
 
 ## Customer data API - Retrieving all customer records.
 The following request can be used to get all customer data for an assignment in Cube:
+
 **GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ASSIGNMENT_ID}```
 
 Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example above.
 
 
 ## Example
+
 **GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
 
 In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
