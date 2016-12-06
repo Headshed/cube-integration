@@ -18,6 +18,7 @@ To create a new customer record, you need to POST the following parameters. Mand
 The following request can be used to update Customer data records in Cube:
 
 **POST** ```https://YOURACCOUNT.cube4sales.com/crm/update_customer/```
+
 The POST body must contain the fields you want to update, and MUST include assignment_id and customer_id.
 
 In the example below, we want to update ```gender```
