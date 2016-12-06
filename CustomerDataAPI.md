@@ -1,16 +1,56 @@
-## Customer data API - Creating customer records.
-The following request can be used to create Customer data records in Cube:
+## Customer data API - Retrieving a single customer record.
+The following request can be used to get Customer data from Cube:
+**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customer/?assignment_id={ASSIGNMENT_ID}&customer_id={CUSTOMER_ID}```
 
-**POST** ```https://YOURACCOUNT.cube4sales.com/crm/customers```
+The assignment_id and customer_id must be integers
 
-To create a new customer record, you need to POST the following parameters. Mandatory parameters have a * next to them.
+The API will return a > HTTP Response: 200 OK, and a JSON response with all available customer data, including any extra information fields configured for the assignment.
+### Example response:
 
-| Parameter     | Description |
-| ------------- |-------------|
-| customer_id *  | A unique customer ID (typically the id from your CRM system |
-| assignment_id * | The id of the assignment where the customer should be placed |
-| name          | Name of the customer |
-| etc..         | We have a lot of fields - will add them later |
+```json  
+{
+  "customer_id": 20101,
+  "assignment_id": 246,
+  "name": "Olas Reklameservice AS",
+  "gender": "",
+  "birth_date": null,
+  "need_to_know": "500 mbps, 3990 kr",
+  "care_of_name": null,
+  "zone_name": "",
+  "address_street": "My address",
+  "address_street_no": 32,
+  "address_entrance": "",
+  "zip_code": "7000",
+  "city": "Trondheim",
+  "municipality": "",
+  "county": "",
+  "country": "",
+  "phone_1": "90978457",
+  "phone_2": "",
+  "phone_3": "",
+  "email": "ola@olasreklameservice.no",
+  "Oppstartsdato": "2011-12-12",
+  "Antall år": "6",
+  "Pris på dagens avtale": "3990"
+}
+  ```
+
+## Customer data API - Retrieving all customer records.
+The following request can be used to get all customer data for an assignment in Cube:
+**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ASSIGNMENT_ID}```
+
+Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example above.
+
+
+## Example
+```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
+
+
+In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
+Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
+
+For standard customer data fields, the fields are shown (with `null` values when no data is registered)
+
 
 
 
@@ -34,66 +74,18 @@ In the example below, we want to update ```gender```
 Once updated, we will send a ```HTTP Response: 200 OK``` and return a copy of the updated custome record
 
 
+## Customer data API - Creating customer records. (NOT YET IMPLEMENTED)
+The following request can be used to create Customer data records in Cube:
 
-## Customer data API - Retrieving updated customer data.
-The following request can be used to get Customer data from Cube:
-**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ID}```
+**POST** ```https://YOURACCOUNT.cube4sales.com/crm/customers```
 
-> HTTP Response: 200 OK
+To create a new customer record, you need to POST the following parameters. Mandatory parameters have a * next to them.
 
-## Example
-In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
-Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
-(Add image to show configuration)
-In the customer record shown below, only 4 of the assignment specific fields have data registered, and hence only these are displayed/included in the response.
-For standard customer data fields, the fields are shown (with `null` values when no data is registered)
+| Parameter     | Description |
+| ------------- |-------------|
+| customer_id *  | A unique customer ID (typically the id from your CRM system |
+| assignment_id * | The id of the assignment where the customer should be placed |
+| name          | Name of the customer |
+| etc..         | We have a lot of fields - will add them later |
 
-### Example response:
 
-```json  
-{
-    "customer_id": 2488539,
-    "name": "Lastname, Firstname",
-    "gender": null,
-    "birth_date": null,
-    "assignment_id": 9,
-    "care_of_name": null,
-    "address_street": null,
-    "address_street_no": null,
-    "address_entrance": null,
-    "zip_code": null,
-    "city": "ELVERUM",
-    "municipality": null,
-    "county": "Hedmark",
-    "country": null,
-    "phone_1": "99999999",
-    "phone_2": null,
-    "phone_3": null,
-    "email": null,
-    "more_info_fields": {},
-    "updated": "2016-04-07",
-    "updated_by": "magnus@headshed.no",
-    "update_method": "Import new",
-    "org_number": "989898981",
-    "org_number_main": "999911111",
-    "org_name": "Company AS",
-    "nace_code": null,
-    "nace_text": "Utgivelse av blader og tidsskrifter",
-    "number_of_employees": "6",
-    "company_type": null,
-    "established": null,
-    "credit_rating": null,
-    "need_to_know": null,
-    "url": null,
-    "company_email": "company@domain.no",
-    "revenue": null,
-    "po_box": null,
-    "postal_address": null,
-    "postal_zip": null,
-    "postal_city": null,
-    "Klassifisering": "C",
-    "Landsforening": "XYZ",
-    "Region": "Innlandet",
-    "Hoved": "Ja"
-  },
-  ```
