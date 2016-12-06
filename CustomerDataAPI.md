@@ -43,14 +43,12 @@ Cube will return > HTTP Response: 200 OK and a JSON containing a list of custome
 
 
 ## Example
-```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
-
+**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
 
 In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
 Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
 
 For standard customer data fields, the fields are shown (with `null` values when no data is registered)
-
 
 
 
