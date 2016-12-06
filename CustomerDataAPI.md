@@ -68,8 +68,8 @@ In the example below, we want to update ```gender```
 {
     "customer_id": 2488539,
     "assignment_id": 9,
-    "gender": "Male",
-},
+    "gender": "Male"
+}
 ```  
 
 Once updated, we will send a ```HTTP Response: 200 OK``` and return a copy of the updated customer record
