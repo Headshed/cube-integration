@@ -69,7 +69,7 @@ In the example below, we want to update ```gender```
 },
 ```  
 
-Once updated, we will send a ```HTTP Response: 200 OK``` and return a copy of the updated custome record
+Once updated, we will send a ```HTTP Response: 200 OK``` and return a copy of the updated customer record
 
 
 ## Customer data API - Creating customer records. (NOT YET IMPLEMENTED)
