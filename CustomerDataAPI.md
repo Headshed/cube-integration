@@ -3,7 +3,7 @@ The following request can be used to get all customer data for an assignment in 
 
 **GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ASSIGNMENT_ID}```
 
-Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example above.
+Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example below.
 
 
 ## Example
