@@ -1,3 +1,21 @@
+## Customer data API - Retrieving all customer records.
+The following request can be used to get all customer data for an assignment in Cube:
+
+**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ASSIGNMENT_ID}```
+
+Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example above.
+
+
+## Example
+
+**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
+
+In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
+Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
+
+For standard customer data fields, the fields are shown (with `null` values when no data is registered)
+
+
 ## Customer data API - Retrieving a single customer record.
 The following request can be used to get Customer data from Cube:
 
@@ -35,24 +53,6 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
   "Pris på dagens avtale": "3990"
 }
   ```
-
-## Customer data API - Retrieving all customer records.
-The following request can be used to get all customer data for an assignment in Cube:
-
-**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id={ASSIGNMENT_ID}```
-
-Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example above.
-
-
-## Example
-
-**GET** ```https://YOURACCOUNT.cube4sales.com/crm/customers?assignment_id=9```
-
-In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
-Assignment #9 in this example have been configured as a B2B-assignment (Customer records are companies), and 6 assignment specific extra information fields have been configured:
-
-For standard customer data fields, the fields are shown (with `null` values when no data is registered)
-
 
 
 ## Customer data API - Updating customer records.
