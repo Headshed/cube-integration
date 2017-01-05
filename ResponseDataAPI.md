@@ -1,6 +1,6 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/responses/{campaign_id}/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
+**GET** ```https://YOURACCOUNT.cube4sales.com/campaigns/{campaign_id}/responses/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
