@@ -17,7 +17,7 @@ The token must be placed in the Header: ```Authorization: Token (insert your tok
 Contact Headshed support to aquire a authentication Token.
 
 ### Headers
-In addition to one of the Authentication headers, the Request needd to be set up with the following:
+In addition to one of the Authentication headers, the Request need to be set up with the following to show that we use json:
 ```
 Accept: application/json
 Content-Type: application/json
