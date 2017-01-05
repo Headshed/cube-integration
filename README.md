@@ -41,9 +41,32 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
 
 ## Pagination of GET responses
-Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (results).
+Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (``results``).
 
-The default pagination size is 50 (can be changed on request).
+The default pagination size is 50, meaning that only 50 records will be retrevied in each response.
+The example response below show how this works. We see that there is a total number of 1200 records here, but only the 50 first are retreived in the ``results`` list.
+
+```json
+{
+  "count": 1200,
+  "next": "https://nhotest.cube4sales.com/api/v1/assignments/17/customers/?page=2",
+  "previous": null,
+  "results": [
+    {
+      "id": 11772,
+      ...more properties....
+    },
+    {
+      "id": 11773,
+      ...more properties....
+    },    
+    ....max 50 of these...
+   ]
+}   
+  ```
+
+
+
 The example code i Python below show how you can use the pagination links to retreive the complete list (of Customer records for an Assignment in this case)
 ```python
 import requests
