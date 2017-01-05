@@ -1,4 +1,4 @@
-##Services related to Clients, Assignments and Campaigns
+##Services related to Clients, Assignments and Campaigns(NOT YET IMPLEMENTED)
 
 ### Campaigns API
 
