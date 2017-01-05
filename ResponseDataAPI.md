@@ -1,11 +1,11 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/responses?campaign_id={ID}&from={YYYYMMDD}&to={YYYYMMDD}```
+**GET** ```https://YOURACCOUNT.cube4sales.com/responses/{campaign_id}/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
-` campaign_id={ID} ` and ` from={YYYYMMDD} ` are mandatory.
-The ` to=YYYYMMDD ` is optional (will use TODAY if not included)
+` {campaign_id} ` is mandatory.
+The ` from_date` and ` to_date=YYYYMMDD ` are optional (will use TODAY by default)
 
 ## Example
 (Add image to show configuration of this reponse setup in Cube)
