@@ -49,7 +49,7 @@ The example response below show how this works. We see that there is a total num
 ```json
 {
   "count": 1200,
-  "next": "https://nhotest.cube4sales.com/api/v1/assignments/17/customers/?page=2",
+  "next": "https://XXX.cube4sales.com/api/v1/assignments/17/customers/?page=2",
   "previous": null,
   "results": [
     {
@@ -60,7 +60,7 @@ The example response below show how this works. We see that there is a total num
     },    
    ]
 }   
-  ```
+```
 
 
 
