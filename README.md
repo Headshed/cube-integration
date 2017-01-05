@@ -5,8 +5,8 @@ Cube is delivered by [Headshed AS](http://www.headshed.no).
 
 ## Authentication and Headers
 
-Cube supports Basic Authentication and provides data in JSON format.
-_We will soon support token based authentication, and are open to implement other authentication methods upon client request._
+Cube supports Token based, and Basic Authentication and provides data in JSON format.
+_We are open to implement other authentication methods upon client request._
 
 See [Authentication and Headers] (https://github.com/Headshed/cube-integration/blob/master/AuthenticationAndHeaders.md) for details on setting up Authentication and correct request headers.
 
