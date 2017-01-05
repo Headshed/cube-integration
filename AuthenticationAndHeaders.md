@@ -3,8 +3,8 @@ HTTPS is required for accessing the API.
 
 ## HTTP Basic Authentication
 HTTP Basic authentication is the simplest way of interacting with the Cube API. Requests require a username and password.
-``` Authorization: Basic (insert your authentication string here) 
-```
+``` Authorization: Basic (insert your authentication string here)
+
 ## Token based authentication
 Headshed Cube also support Token-based authentication. Contact Headshed support to aquire a Token
 The token must be placed in the Header: ```Authorization: Token (insert your token here)```
