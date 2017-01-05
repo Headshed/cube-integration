@@ -40,7 +40,29 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 
 [Response data API] (https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
 
+## Pagination of GET responses
+Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (results).
 
+The default pagination size is 50 (can be changed on request).
+The example code i Python below show how you can use the pagination links to retreive the complete list (of Customer records for an Assignment in this case)
+```python
+import requests
+
+def read_customers_test():
+    headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbEBnbWFpbC5jb206dGhhaWxhbmQwOQ=='
+    url = 'https://consorttest.cube4sales.com/api/v1/assignments/240/customers/'
+    customer_retrieved = []
+
+    response = requests.get(url=url, headers=headers)
+    customer_retrieved.extend(response.json().get('results'))
+
+    while response.json().get('next') is not None:
+        response = requests.get(url=response.json().get('next'), headers=headers)
+        customer_retrieved.extend(response.json().get('results'))
+
+    return customer_retrieved
+```
 ## Example
 This is an example of how you can use the API's to retrieve updated response- and customer data from Cube.
 
