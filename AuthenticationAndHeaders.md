@@ -3,6 +3,7 @@ HTTPS is required for accessing the API.
 
 ## HTTP Basic Authentication
 HTTP Basic authentication is the simplest way of interacting with the Cube API. Requests require a username and password. ```Authorization: Basic (insert your authentication string here)```
+
 Your authentication string is a base64 encoded version of your credentials. You can generate this in Python:
 `base64.b64encode("myemail@example.com:password")`
 
