@@ -58,7 +58,9 @@ The example response below show how this works. We see that there is a total num
     {
       "id": 11773,
     },    
-    ....max 50 of these...
+   
+   etc. - max 50 records
+   
    ]
 }   
   ```
