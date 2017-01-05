@@ -19,7 +19,7 @@ For standard customer data fields, the fields are shown (with `null` values when
 As the result may contain thousands of customer records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. These will be null when there are no more customers to fetch. 
 The result records are is put in a list (results).
 
-The default pagination size is 25 (can be changed on request).
+The default pagination size is 50 (can be changed on request).
 
 ```json  
 {
