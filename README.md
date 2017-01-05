@@ -44,7 +44,7 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (``results``).
 
 The default pagination size is 50, meaning that only 50 records will be retrevied in each response.
-The example response below show how this works. We see that there is a total number of 1200 records here, but only the 50 first are retreived in the ``results`` list.
+The example response below show how this works. We see that there is a total number of 1200 records here, but only the 50 first are retreived in the ``results`` list. The customer records have been reduced to only show an 'id' in this example.
 
 ```json
 {
@@ -54,11 +54,9 @@ The example response below show how this works. We see that there is a total num
   "results": [
     {
       "id": 11772,
-      ...more properties....
     },
     {
       "id": 11773,
-      ...more properties....
     },    
     ....max 50 of these...
    ]
