@@ -10,7 +10,7 @@ Both ` from_date` and ` to_date ` are optional (will use TODAY as default)
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
 The json response returned will have links (next/previous) you can use to navigate the results. These will be ```null```
-when there are no more customers to fetch. The default pagination size is 25 (can be changed on request)
+when there are no more customers to fetch. The default pagination size is 50 (can be changed on request)
 
 
 ### Example response:
