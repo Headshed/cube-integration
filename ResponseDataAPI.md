@@ -1,52 +1,48 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/campaigns/{campaign_id}/responses/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
+**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{campaign_id}/responses/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
 ` {campaign_id} ` is mandatory.
-The ` from_date` and ` to_date=YYYYMMDD ` are optional (will use TODAY by default)
+Both ` from_date` and ` to_date ` are optional (will use TODAY as default)
 
-## Example
-(Add image to show configuration of this reponse setup in Cube)
+### Pagination
+As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
+The json response returned will have links (next/previous) you can use to navigate the results. These will be ```null```
+when there are no more customers to fetch. The default pagination size is 25 (can be changed on request)
+
+
 ### Example response:
 
 ```json  
 {
-    {   "customer_id": 2488539,
-        "name": "Lastname, Firstname",
-        "updated": "2016-04-07",
-        "updated_by": "magnus@headshed.no",
-        "update_method": "Response",
-        "org_number": "989898981",
-        "org_name": "Company GBH",
-        "response_type": "Scheduled call",
-        "scheduled_call_due_date": "28.02.2015",
-        "comment": "Customer wanted to be contacted again next week. Need to discuss offer with his CEO",
-    }
+  "count": 207,
+  "next": "http://XXX.cube4sales.com/api/v1/campaigns/926/responses/from_date/20160924/?page=2",
+  "previous": null,
+  "results": [
     {
-        "customer_id": 2488538,
-        "name": "AnotherLastname, AnotherFirstname",
-        "updated": "2016-04-07",
-        "updated_by": "magnus@headshed.no",
-        "update_method": "Response",
-        "org_number": "777777777",
-        "org_name": "Company AS",
-        "response_type": "Completed with action",
-        "comment": "Meeting accepted",
-    }
+      "submitted_by": "someone@callcenter.no",
+      "submitted_when": "2016-12-02T13:55:20.257789Z",
+      "crm_customer_id": 1286928,
+      "customer_name": "CUSTOMER NAME",
+      "campaign_id": 926,
+      "type": "Completed - No",
+      "subtype": "Ville ikke kontaktes",
+      "comment": ""
+    },
     {
-        "customer_id": 2488537,
-        "name": "YetAnotherLastname, YetAnotherFirstname",
-        "updated": "2016-04-07",
-        "updated_by": "magnus@headshed.no",
-        "update_method": "Response",
-        "org_number": "555555555",
-        "org_name": "Company INC",
-        "response_type": "Completed without action",
-        "response_alternative": "Ingen ansatte å forsikre",
-        "comment": "Customer do not want to be contacted about this again",
-    }    
+      "submitted_by": "someone@callcenter.no",
+      "submitted_when": "2016-12-02T13:53:16.450388Z",
+      "crm_customer_id": 1286937,
+      "customer_name": "ANOTHER CUSTOMER NAME",
+      "campaign_id": 926,
+      "type": "Completed - Yes",
+      "subtype": "Betaler tilsendt faktura",
+      "comment": ""
+    }
+ 
+]
 }
   ```
 
