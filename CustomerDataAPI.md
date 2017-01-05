@@ -91,6 +91,27 @@ The default pagination size is 25 (can be changed on request).
 }
   ```
 
+## Reading paginated data from the API - example code in Python
+The code below is an example on how you can use the pagination to retrieve all customers from an assignment.
+```python
+import requests
+
+def read_customers_test():
+    headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbEBnbWFpbC5jb206dGhhaWxhbmQwOQ=='
+    url = 'https://consorttest.cube4sales.com/api/v1/assignments/240/customers/'
+    customer_retrieved = []
+
+    response = requests.get(url=url, headers=headers)
+    customer_retrieved.extend(response.json().get('results'))
+
+    while response.json().get('next') is not None:
+        response = requests.get(url=response.json().get('next'), headers=headers)
+        customer_retrieved.extend(response.json().get('results'))
+
+    return customer_retrieved
+```
+
 ## Customer data API - Retrieving a single customer record.
 The following request can be used to get Customer data from Cube:
 
