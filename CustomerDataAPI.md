@@ -98,8 +98,8 @@ import requests
 
 def read_customers_test():
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbEBnbWFpbC5jb206dGhhaWxhbmQwOQ=='
-    url = 'https://consorttest.cube4sales.com/api/v1/assignments/240/customers/'
+    headers['Authorization'] = 'Basic YOUR_BASE64_ENCODED_STRING_HERE'
+    url = 'https://XXXX.cube4sales.com/api/v1/assignments/240/customers/'
     customer_retrieved = []
 
     response = requests.get(url=url, headers=headers)
