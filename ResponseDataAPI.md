@@ -1,11 +1,11 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{campaign_id}/responses/from_date/{YYYYMMDD}/to_date/{YYYYMMDD}```
+**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{campaign_id}/responses/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
-` {campaign_id} ` is mandatory.
-Both ` from_date` and ` to_date ` are optional (will use TODAY as default)
+` {campaign_id} ` is mandatory as a URL parameter.
+Both ` from_date` and ` to_date ` are optional query parameters (will use TODAY as default)
 
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
@@ -18,7 +18,7 @@ when there are no more customers to fetch. The default pagination size is 50 (ca
 ```json  
 {
   "count": 207,
-  "next": "http://XXX.cube4sales.com/api/v1/campaigns/926/responses/from_date/20160924/?page=2",
+  "next": "http://XXX.cube4sales.com/api/v1/campaigns/926/responses?from_date=20160924/?page=2",
   "previous": null,
   "results": [
     {
