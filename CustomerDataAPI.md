@@ -117,14 +117,15 @@ The following request can be used to get Customer data from Cube:
 
 **GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
 
-The assignment_id and customer_id must be integers
+The assignment_id and customer_id must be integers.
+**NOTE:** The customer_id is the internal id ('id') for the customer record. (Do not use the 'external_customer_id')
 
 The API will return a > HTTP Response: 200 OK, and a JSON response with all available customer data, including any extra information fields configured for the assignment.
 ### Example response:
 
 ```json  
 {
-  "customer_id": 20101,
+  "id": 20101,
   "assignment_id": 246,
   "name": "Olas Reklameservice AS",
   "gender": "",
@@ -147,6 +148,7 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
   "Oppstartsdato": "2011-12-12",
   "Antall år": "6",
   "Pris på dagens avtale": "3990"
+  "external_customer_id" : 999888
 }
   ```
 
@@ -157,6 +159,7 @@ The following request can be used to update Customer data records in Cube:
 **PUT** ```https://YOURACCOUNT.cube4sales.com/YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
 
 The PUT body must contain the fields you want to update, and MUST include assignment_id and customer_id.
+**NOTE:** The customer_id is the internal id ('id') for the customer record. (Do not use the 'external_customer_id')
 
 In the example below, we want to update ```gender```
 
