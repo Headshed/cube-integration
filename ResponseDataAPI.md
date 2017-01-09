@@ -29,7 +29,8 @@ when there are no more customers to fetch. The default pagination size is 50 (ca
       "campaign_id": 926,
       "type": "Completed - No",
       "subtype": "Ville ikke kontaktes",
-      "comment": ""
+      "comment": "",
+      "external_customer_id": 971352
     },
     {
       "submitted_by": "someone@callcenter.no",
@@ -39,7 +40,8 @@ when there are no more customers to fetch. The default pagination size is 50 (ca
       "campaign_id": 926,
       "type": "Completed - Yes",
       "subtype": "Betaler tilsendt faktura",
-      "comment": ""
+      "comment": "",
+      "external_customer_id": 971353
     }
  
 ]
