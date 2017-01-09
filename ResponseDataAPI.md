@@ -48,3 +48,9 @@ when there are no more customers to fetch. The default pagination size is 50 (ca
 }
   ```
 
+## Note on customer_id's
+As you see from the response, there are two id fields: A "crm_customer_id" and a "external_customer_id".
+The "crm_customer_id" is the internal/unique id for the customer record in Cube. 
+The "exteral_customer_id" is the id set by the external system on import. This feiald is optional in Cube (depending on assignment configuration), but may be what you need to link the response record to a customer in your system.
+
+The "crm_customer_id" refers to the "id" field in the CustomerData API https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md
