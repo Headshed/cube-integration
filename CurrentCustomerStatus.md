@@ -9,7 +9,7 @@ To get the customer status for all customers in an assignment:
 
 ### Pagination
 As the result may contain many customers, we use Pagination to limit the number of results fetched in one go.
-Read more about how the Pagination works [in the Readme](../cube-integration/README.md).
+Read more about how the Pagination works [in the Readme](/cube-integration/README.md).
 The json response returned will have links (next/previous) you can use to navigate the results. These will be ```null```
 when there are no more customers to fetch. The default pagination size is 50 (can be changed on request)
 
