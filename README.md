@@ -70,7 +70,7 @@ import requests
 
 def read_customers_test():
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbEBnbWFpbC5jb206dGhhaWxhbmQwOQ=='
+    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbAAAAWFpbC5jb206dGhhaWxhbmQwOQ=='
     url = 'https://demo.cube4sales.com/api/v1/assignments/240/customers/'
     customer_retrieved = []
 
