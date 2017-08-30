@@ -1,14 +1,14 @@
 ## Customer data API - Retrieving all customer records.
 The following request can be used to get all customer data for an assignment in Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/```
 
 Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer records similar to the example below.
 
 
 ## Example
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/assignments/9/customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/9/customers/```
 
 In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
 Assignment #9 in this example have been configured as a B2C-assignment (Customer records are consumers), and 6 assignment specific extra information fields have been configured:
@@ -24,7 +24,7 @@ The default pagination size is 50 (can be changed on request).
 ```json  
 {
   "count": 3909,
-  "next": "http://YOURACCOUNT.cube4sales.com/api/v1/assignments/9/customers/?page=2",
+  "next": "http://YOURACCOUNT.headshed.com/api/v1/assignments/9/customers/?page=2",
   "previous": null,
   "results": [
     {
@@ -99,7 +99,7 @@ import requests
 def read_customers_test():
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
     headers['Authorization'] = 'Basic YOUR_BASE64_ENCODED_STRING_HERE'
-    url = 'https://XXXX.cube4sales.com/api/v1/assignments/240/customers/'
+    url = 'https://XXXX.headshed.com/api/v1/assignments/240/customers/'
     customer_retrieved = []
 
     response = requests.get(url=url, headers=headers)
@@ -115,7 +115,7 @@ def read_customers_test():
 ## Customer data API - Retrieving a single customer record.
 The following request can be used to get Customer data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
 
 The assignment_id and customer_id must be integers.
 **NOTE:** The customer_id is the internal id ('id') for the customer record. (Do not use the 'external_customer_id')
@@ -156,7 +156,7 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
 ## Customer data API - Updating customer records.
 The following request can be used to update Customer data records in Cube:
 
-**PUT** ```https://YOURACCOUNT.cube4sales.com/YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
+**PUT** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
 
 The PUT body must contain the fields you want to update, and MUST include assignment_id and customer_id.
 **NOTE:** The customer_id is the internal id ('id') for the customer record. (Do not use the 'external_customer_id')
@@ -175,7 +175,7 @@ Once updated, we will send a ```HTTP Response: 200 OK``` and return all data for
 ## Customer data API - Creating customer records. (NOT YET IMPLEMENTED)
 The following request can be used to create Customer data records in Cube:
 
-**POST** ```https://YOURACCOUNT.cube4sales.com/YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
+**POST** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
 
 To create a new customer record, you need to POST the following parameters. Mandatory parameters have a * next to them.
 
