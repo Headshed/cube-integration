@@ -1,14 +1,14 @@
 We provide an API to retreive the current customer status for assignments, campaigns and individual customers.
 
 To get the customer status for all customers in an assignment:
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/assignments/{ASSIGNMENT_ID}/callflow_customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/callflow_customers/```
 
 > HTTP Response: 200 OK
 
 ` {ASSIGNMENT_ID} ` is an integer representing the id of the assignment you want to access.
 
 To get the customer status for all customers in a campaign:
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/```
 
 > HTTP Response: 200 OK
 
@@ -16,7 +16,7 @@ To get the customer status for all customers in a campaign:
 
 
 To get the customer status for all customers in a campaign with a speific call state:
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}/```
 
 > HTTP Response: 200 OK
 
@@ -25,7 +25,7 @@ To get the customer status for all customers in a campaign with a speific call s
 
 These are the valid call-states in Cube: 'On Hold', 'To Call', 'Scheduled', 'Lead', 'Unconfirmed - Yes', 'Booked',  'Appointment open', 'Appointment closed', 'Completed - Yes', 'Completed - No', 'Excluded'
 
-Example: ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/998/callflow_customers/?call_state=Completed - Yes```
+Example: ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/998/callflow_customers/?call_state=Completed - Yes```
 
 
 ### Pagination
@@ -37,7 +37,7 @@ Read more about how our Pagination works [in the Readme](README.md).
 ```json  
 {
   "count": 15516,
-  "next": "http://demo.cube4sales.com/api/v1/assignments/239/callflow_customers/?page=2",
+  "next": "http://demo.headshed.com/api/v1/assignments/239/callflow_customers/?page=2",
   "previous": null,
   "results": [
     {
