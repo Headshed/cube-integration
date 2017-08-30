@@ -6,7 +6,7 @@ The following request can be used to get information about Campaigns in Cube:
 
 GET
 ```
-https://YOURACCOUNT.cube4sales.com/campaigns?include_inactive_campaigns=True
+https://YOURACCOUNT.headshed.com/campaigns?include_inactive_campaigns=True
 ```
 > HTTP Response: 200 OK
 
@@ -41,7 +41,7 @@ The following request can be used to get information about Assignments in Cube:
 
 GET
 ```
-https://YOURACCOUNT.cube4sales.com/assignments
+https://YOURACCOUNT.headshed.com/assignments
 ```
 > HTTP Response: 200 OK
 
