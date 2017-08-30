@@ -1,6 +1,6 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.cube4sales.com/api/v1/campaigns/{campaign_id}/responses/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{campaign_id}/responses/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
@@ -18,7 +18,7 @@ when there are no more customers to fetch. The default pagination size is 50 (ca
 ```json  
 {
   "count": 207,
-  "next": "http://XXX.cube4sales.com/api/v1/campaigns/926/responses?from_date=20160924/?page=2",
+  "next": "http://XXX.headshed.com/api/v1/campaigns/926/responses?from_date=20160924/?page=2",
   "previous": null,
   "results": [
     {
