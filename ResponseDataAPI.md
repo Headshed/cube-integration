@@ -24,35 +24,36 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/926/responses/?from_d
   "previous": null,
   "results": [
     {
-      "submitted_by": "someone@callcenter.no",
-      "submitted_when": "2017-01-01T13:55:20.257789Z",
-      "crm_customer_id": 1286928,
-      "customer_name": "CUSTOMER NAME",
-      "campaign_id": 926,
-      "type": "Sale",
-      "subtype": "Betaler tilsendt faktura",
-      "comment": "",
-      "external_customer_id": 971352
+     "crm__address_street": "Hinnavågen 2001",
+     "crm__customer_id": "355116",
+     "crm__last_updated": "2017-10-13",
+     "crm__zip_code": "4707",
+     "crm__name": "Ola Nordmann",
+     "crm__city": "Vennesla",
+     "crm__email": "xxx@hotmail.com",
+     "crm__extra__Opprinnelig_lånebeløp_1324": "121911",
+     "crm__phone_3": "40218008",
+     "crm__phone_2": "97747430",
+     "crm__phone_1": "90978457",
+     "crm__extra__Resterende_nedbetalingstid_1358": "5,92 år",
+     "crm__extra__Lånebeløp_utbetalt_1320": "2017-09-28",
+     "client__short_name": "MyClient",
+     "client__full_name": "MyClient",
+     "assignment__name": "New sales",
+     "campaign__name": "Produktsalg 2017",
+     "campaign__type": "Sales",
+     "response_comment": ""
+     "response_subtype": "Ja - Salg",
+     "response_submitted_when": "2017-01-01 12:24",
+     "response_type": "Sale",
+     "response_submitted_by": "someone@callcenter.no"
     },
-    {
-      "submitted_by": "someone@callcenter.no",
-      "submitted_when": "2017-01-01T13:53:16.450388Z",
-      "crm_customer_id": 1286937,
-      "customer_name": "ANOTHER CUSTOMER NAME",
-      "campaign_id": 926,
-      "type": "Sale",
-      "subtype": "Betaler tilsendt faktura",
-      "comment": "",
-      "external_customer_id": 971353
-    }
- 
+    ........
 ]
 }
   ```
 
-## Note on customer_id's
-As you see from the response, there are two id fields: A "crm_customer_id" and a "external_customer_id".
-The "crm_customer_id" is the internal/unique id for the customer record in Cube. 
-The "exteral_customer_id" is the id set by the external system on import. This field is optional in Headshed Cube (depending on assignment configuration), but may be what you need to link the response record to a customer in your system.
-
-The "crm_customer_id" refers to the "id" field in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "Go to CustomerData API")
+## Note on data prefixes
+As you see from the response, there are prefixed fields like crm__xxx and response__xxx.
+These refer to different parts of the information. The customer information is from the Cube internal CRM (on Assignment), while the response data. 
+The "crm__customer_id" is the imported customer_id field, and NOT the same as the internal "id" field in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
