@@ -5,7 +5,7 @@ The following request can be used to get response data from Cube:
 > HTTP Response: 200 OK
 
 ` {campaign_id} ` is mandatory as a URL parameter.
-` from_date` and ` to_date ` are mandatory query parameters
+` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one ofthem are not specified.
 `response_type` is an optional parameter to filter the result to a specific response type (e.g. Sale, Offer etc.) 
 
 ### Pagination
