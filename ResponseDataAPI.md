@@ -11,7 +11,7 @@ The following request can be used to get response data from Cube:
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
 The json response returned will have links (next/previous) you can use to navigate the results. These will be ```null```
-when there are no more customers to fetch. The default pagination size is 50 (can be changed on request)
+when there are no more customers to fetch. The default pagination size is 500 (can be changed on request)
 
 
 ### Example response:
