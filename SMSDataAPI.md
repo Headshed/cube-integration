@@ -69,8 +69,7 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/15/sms/?from_date=201
             "assignment__name": "Forsikringskunder",
             "client__short_name": "Selskap",
             "client__full_name": "Selskap"
-        },,
-    ........
+        },
 ]
 }
   ```
