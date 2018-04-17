@@ -40,6 +40,11 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 
 [Response data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
 
+## Recieving updated SMS-records from Cube
+In a typical use-case scenario, Cube is used to register all contact with a customer including SMS. To retrive SMS history in a campaign or an assignment, use the
+
+[SMS data API](https://github.com/Headshed/cube-integration/blob/master/SMSDataAPI.md)
+
 ## Pagination of GET responses
 Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (``results``).
 
