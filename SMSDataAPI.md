@@ -3,6 +3,8 @@ The following request can be used to get sms data from Cube for an assignment:
 **GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{assignment_id}/sms/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
 
 > HTTP Response: 200 OK
+` {assignment_id} ` is a mandatory part of the URL.
+` from_date` and ` to_date ` are optional query parameters. The request will return data from "today" if not both date parameters are specified.
 
 The following request can be used to get sms data from Cube for a campaign:
 
@@ -10,7 +12,7 @@ The following request can be used to get sms data from Cube for a campaign:
 
 > HTTP Response: 200 OK
 
-` {assignment_id} ` and` {campaign_id} ` are mandatory as a URL parameter.
+`{campaign_id}` is a mandatory URL parameter.
 ` from_date` and ` to_date ` are optional query parameters. The request will return data from "today" if not both date parameters are specified.
 
 ### Pagination
