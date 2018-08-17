@@ -12,6 +12,8 @@ https://YOURACCOUNT.headshed.com/campaigns?include_inactive_campaigns=True
 
 The `include_inactive_campaigns `parameter is optional and will be set to False of not included. (i.e. retrieving only active campaigns)
 
+NB! Campaigns API is only available for internal users of Cube.
+
 #### Example response:
 ```json  
 {
