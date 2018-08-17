@@ -1,4 +1,4 @@
-##Services related to Clients, Assignments and Campaigns(NOT YET IMPLEMENTED)
+##Services related to Clients, Assignments and Campaigns
 
 ### Campaigns API
 
@@ -14,29 +14,41 @@ The `include_inactive_campaigns `parameter is optional and will be set to False 
 
 #### Example response:
 ```json  
-{
-    {   "campaign_id": 1,
-        "campaign_name": "My First Campaign",
-        "start_date": "2016-04-07",
-        "end_date": "",
-        "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
+[
+    {
+        "campaign__id": 1,
+        "campaign__type": "Booking",
+        "campaign__name": "My first campaign",
+        "campaign__description": "This is how I describe this campaign",
+        "campaign__start_date": "2016-10-31",
+        "campaign__end_date": "2016-11-14",
+        "campaign__archived_date": "",
+        "assignment__id": 1,
+        "assignment__name": "Test assignment",
+        "assignment__description": "This assignment is used for testing",
+        "client__id": 1,
+        "client__short_name": "Test client",
+        "client__full_name": "This client is used for testing"
+    },
+    {
+        "campaign__id": 2,
+        "campaign__type": "Sales",
+        "campaign__name": "My sales campaign",
+        "campaign__description": "A campaign for selling things",
+        "campaign__start_date": "2016-02-20",
+        "campaign__end_date": "2017-03-23",
+        "campaign__archived_date": "",
+        "assignment__id": 1,
+        "assignment__name": "Test assignment",
+        "assignment__description": "This assignment is used for testing",
+        "client__id": 1,
+        "client__short_name": "Test client",
+        "client__full_name": "This client is used for testing"
     }
-    {   "campaign_id": 2,
-        "campaign_name": "My Second Campaign",
-        "start_date": "2016-05-07",
-        "end_date": "2016-12-24",
-        "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-}
+    ]
   ```
 
-### Assignments API
+### Assignments API (NOT YET IMPLEMENTED)
 The following request can be used to get information about Assignments in Cube:
 
 GET
@@ -48,20 +60,20 @@ https://YOURACCOUNT.headshed.com/assignments
 #### Example response:
 ```json  
 {
-    {   "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
+    {   "assignment__id": 32,
+        "assignment__name": "My Assignment number one",
+        "client__id": 42,
+        "client__short_name": "My best Client",
     }
-    {   "assignment_id": 33,
-        "assignment_name": "My Assignment number two",
-        "client_id": 42,
-        "client_name": "My best Client",
+    {   "assignment__id": 33,
+        "assignment__name": "My Assignment number two",
+        "client__id": 42,
+        "client__short_name": "My best Client",
     }
-    {   "assignment_id": 72,
-        "assignment_name": "My Special Assignment",
-        "client_id": 44,
-        "client_name": "My second best Client",
+    {   "assignment__id": 72,
+        "assignment__name": "My Special Assignment",
+        "client__id": 44,
+        "client__short_name": "My second best Client",
     }    
 }
 ```
