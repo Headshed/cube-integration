@@ -6,11 +6,10 @@ The following request can be used to get information about all Campaigns in Cube
 
 GET
 ```
-https://YOURACCOUNT.headshed.com/campaigns?include_inactive_campaigns=True
+https://YOURACCOUNT.headshed.com/campaigns
 ```
 > HTTP Response: 200 OK
 
-The `include_inactive_campaigns `parameter is optional and will be set to False of not included. (i.e. retrieving only active campaigns)
 
 #### Example response:
 ```json  
