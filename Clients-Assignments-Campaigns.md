@@ -1,8 +1,8 @@
-##Services related to Clients, Assignments and Campaigns(NOT YET IMPLEMENTED)
+##Services related to Clients, Assignments and Campaigns
 
 ### Campaigns API
 
-The following request can be used to get information about Campaigns in Cube:
+The following request can be used to get information about all Campaigns in Cube:
 
 GET
 ```
@@ -35,33 +35,3 @@ The `include_inactive_campaigns `parameter is optional and will be set to False 
     }
 }
   ```
-
-### Assignments API
-The following request can be used to get information about Assignments in Cube:
-
-GET
-```
-https://YOURACCOUNT.headshed.com/assignments
-```
-> HTTP Response: 200 OK
-
-#### Example response:
-```json  
-{
-    {   "assignment_id": 32,
-        "assignment_name": "My Assignment number one",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-    {   "assignment_id": 33,
-        "assignment_name": "My Assignment number two",
-        "client_id": 42,
-        "client_name": "My best Client",
-    }
-    {   "assignment_id": 72,
-        "assignment_name": "My Special Assignment",
-        "client_id": 44,
-        "client_name": "My second best Client",
-    }    
-}
-```
