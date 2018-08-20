@@ -18,6 +18,8 @@ https://AGENTACCOUNT.headshed.com/client_access/campaigns
 ```
 > HTTP Response: 200 OK
 
+NB! Campaigns API is only available for internal users of Cube.
+
 #### Example response:
 ```json  
 {
