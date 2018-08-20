@@ -2,7 +2,7 @@
 
 ### Campaigns API
 
-The following request can be used to get information about all Campaigns in Cube:
+The following request can be used by internal users to get information about all Campaigns in Cube:
 
 GET
 ```
@@ -10,6 +10,13 @@ https://YOURACCOUNT.headshed.com/campaigns
 ```
 > HTTP Response: 200 OK
 
+External users with client access can use the following request to get information about all Campaigns in the client access in Cube:
+
+GET
+```
+https://AGENTACCOUNT.headshed.com/client_access/campaigns
+```
+> HTTP Response: 200 OK
 
 #### Example response:
 ```json  
