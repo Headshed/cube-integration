@@ -21,9 +21,7 @@ To get the customer status for all customers in a campaign with a speific call s
 > HTTP Response: 200 OK
 
 ` {CAMPAIGN_ID} ` is an integer representing the id of the campaign you want to access.
-` {CALL_STATE_CODE} ` parameter is a string with the specific call_state you would like to filter on.
-
-These are the valid call-states in Cube: 'On Hold', 'To Call', 'Scheduled', 'Lead', 'Unconfirmed - Yes', 'Booked',  'Appointment open', 'Appointment closed', 'Completed - Yes', 'Completed - No', 'Excluded'
+` {CALL_STATE_CODE} ` parameter is a string with the specific call_state you would like to filter on. The call_state is defined on your Campaigns.
 
 Example: ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/998/callflow_customers/?call_state=Completed - Yes```
 
@@ -60,7 +58,6 @@ Read more about how our Pagination works [in the Readme](README.md).
       "crm__last_updated_by": "torbjorn@headshed.no",
       "callflow__last_change__user": "torbjorn@headshed.no",
       "crm__name": "Ola Nordmann",
-      "callflow__crm_customer_id": 1312869,
       "crm__city": "",
       "crm__municipality": "",
       "crm__email": "",
