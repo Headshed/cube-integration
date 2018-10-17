@@ -19,74 +19,74 @@ For standard customer data fields, the fields are shown (with `null` values when
 As the result may contain thousands of customer records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. These will be null when there are no more customers to fetch. 
 The result records are is put in a list (results).
 
-The default pagination size is 50 (can be changed on request).
+The default pagination size is 500 (can be changed on request).
 
 ```json  
 {
-  "count": 3909,
-  "next": "http://YOURACCOUNT.headshed.com/api/v1/assignments/9/customers/?page=2",
-  "previous": null,
-  "results": [
-    {
-      "customer_id": 793558,
-      "assignment_id": 98,
-      "name": "SOME CUSTOMER NAME",
-      "gender": "",
-      "birth_date": null,
-      "need_to_know": "Startet 2000-04-12, termin 3 | OR",
-      "care_of_name": "",
-      "zone_name": "",
-      "address_street": "SOME ROAD",
-      "address_street_no": 21,
-      "address_entrance": "",
-      "zip_code": "3940",
-      "city": "MIDDLE_OF_NOWHERE",
-      "municipality": null,
-      "county": "",
-      "country": "",
-      "phone_1": "99999999",
-      "phone_2": "88888888",
-      "phone_3": null,
-      "email": "",
-      "company": null,
-      "active products": null,
-      "gen info 1": "3.0",
-      "gen info 2": null,
-      "gen info 3": "OR",
-      "gen info 5": "AGD_101215_update",
-      "gen date 2": "2000-04-12"
-    },
-    {
-      "customer_id": 781284,
-      "assignment_id": 98,
-      "name": "ANOTHER CUSTOMER NAME",
-      "gender": "",
-      "birth_date": null,
-      "need_to_know": "OR",
-      "care_of_name": "",
-      "zone_name": "",
-      "address_street": "MIDDLE_OF_NOWHERE",
-      "address_street_no": null,
-      "address_entrance": "",
-      "zip_code": "3870",
-      "city": "FYRESDAL",
-      "municipality": null,
-      "county": "",
-      "country": "",
-      "phone_1": "48272265",
-      "phone_2": "48272265",
-      "phone_3": null,
-      "email": "",
-      "company": null,
-      "active products": "3",
-      "gen info 1": "Standard giro",
-      "gen info 2": null,
-      "gen info 3": "OR",
-      "gen info 5": "AGD_101215_update",
-      "gen date 2": "2015-06-12"
-    }
-  ]
-}
+    "count": 701,
+    "next": "http://YOURDOMAIN.headshed.com/api/v1/assignments/1/customers/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "crm__customer_id": "9120011999",
+            "crm__standard_info__name": "Olas Produksjon AS",
+            "crm__standard_info__phone_1": "90909090",
+            "crm__standard_info__phone_2": "",
+            "crm__standard_info__phone_3": "",
+            "crm__standard_info__email": "olan@produksjon.no",
+            "crm__custom_info__17": "A",
+            "crm__custom_info__388": "Olaveien 2",
+            "crm__custom_info__225": "",
+            "crm__custom_info__390": "ASKIM",
+            "crm__custom_info__78": "",
+            "crm__custom_info__253": 233,
+            "crm__custom_info__79": "",
+            "crm__custom_info__103": "",
+            "crm__custom_info__101": "",
+            "crm__custom_info__102": "",
+            "crm__custom_info__104": "",
+            "crm__custom_info__100": "",
+            "crm__custom_info__387": "99988899",
+            "crm__custom_info__385": "Per Olsen",
+            "crm__custom_info__391": "Olaveien 2, 1832 ASKIM",
+            "crm__custom_info__24": "1948-01-01",
+            "crm__custom_info__18": "PRODUKSJON",
+            "crm__custom_info__19": "BNL",
+            "crm__custom_info__20": "1281847542.0",
+            "crm__custom_info__21": "233.0",
+            "crm__custom_info__386": "Klassifisering A",
+            "crm__custom_info__389": "1832"
+        },
+        {
+            "crm__customer_id": "9120011888",
+            "crm__standard_info__name": "Pers Hårklipperi AS",
+            "crm__standard_info__phone_1": "90909088",
+            "crm__standard_info__phone_2": "",
+            "crm__standard_info__phone_3": "",
+            "crm__standard_info__email": "per@klipperiet.no",
+            "crm__custom_info__17": "A",
+            "crm__custom_info__388": "Perveien 2",
+            "crm__custom_info__225": "",
+            "crm__custom_info__390": "ASKIM",
+            "crm__custom_info__78": "",
+            "crm__custom_info__253": 233,
+            "crm__custom_info__79": "",
+            "crm__custom_info__103": "",
+            "crm__custom_info__101": "",
+            "crm__custom_info__102": "",
+            "crm__custom_info__104": "",
+            "crm__custom_info__100": "",
+            "crm__custom_info__387": "99988899",
+            "crm__custom_info__385": "Per Olsen",
+            "crm__custom_info__391": "Perveien 2, 1832 ASKIM",
+            "crm__custom_info__24": "1973-01-01",
+            "crm__custom_info__18": "FRISØR",
+            "crm__custom_info__19": "BNL",
+            "crm__custom_info__20": "1281847542.0",
+            "crm__custom_info__21": "233.0",
+            "crm__custom_info__386": "Klassifisering A",
+            "crm__custom_info__389": "1832"
+        },
   ```
 
 ## Reading paginated data from the API - example code in Python
@@ -122,34 +122,39 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
 
 ```json  
 {
-  "customer_id": 20101,
-  "assignment_id": 246,
-  "name": "Olas Reklameservice AS",
-  "gender": "",
-  "birth_date": null,
-  "need_to_know": "500 mbps, 3990 kr",
-  "care_of_name": null,
-  "zone_name": "",
-  "address_street": "My address",
-  "address_street_no": 32,
-  "address_entrance": "",
-  "zip_code": "7000",
-  "city": "Trondheim",
-  "municipality": "",
-  "county": "",
-  "country": "",
-  "phone_1": "90978457",
-  "phone_2": "",
-  "phone_3": "",
-  "email": "ola@olasreklameservice.no",
-  "Oppstartsdato": "2011-12-12",
-  "Antall år": "6",
-  "Pris på dagens avtale": "3990"
-}
+            "crm__customer_id": "9120011888",
+            "crm__standard_info__name": "Pers Hårklipperi AS",
+            "crm__standard_info__phone_1": "90909088",
+            "crm__standard_info__phone_2": "",
+            "crm__standard_info__phone_3": "",
+            "crm__standard_info__email": "per@klipperiet.no",
+            "crm__custom_info__17": "A",
+            "crm__custom_info__388": "Perveien 2",
+            "crm__custom_info__225": "",
+            "crm__custom_info__390": "ASKIM",
+            "crm__custom_info__78": "",
+            "crm__custom_info__253": 233,
+            "crm__custom_info__79": "",
+            "crm__custom_info__103": "",
+            "crm__custom_info__101": "",
+            "crm__custom_info__102": "",
+            "crm__custom_info__104": "",
+            "crm__custom_info__100": "",
+            "crm__custom_info__387": "99988899",
+            "crm__custom_info__385": "Per Olsen",
+            "crm__custom_info__391": "Perveien 2, 1832 ASKIM",
+            "crm__custom_info__24": "1973-01-01",
+            "crm__custom_info__18": "FRISØR",
+            "crm__custom_info__19": "BNL",
+            "crm__custom_info__20": "1281847542.0",
+            "crm__custom_info__21": "233.0",
+            "crm__custom_info__386": "Klassifisering A",
+            "crm__custom_info__389": "1832"
+        }
   ```
 
 
-## Customer data API - Updating customer records.
+## Customer data API - Updating customer records. (NOT YET IMPLEMENTED)
 The following request can be used to update Customer data records in Cube:
 
 **PUT** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/customers/{CUSTOMER_ID}```
@@ -160,7 +165,7 @@ In the example below, we want to update ```gender```
 
 ```json 
 {
-    "gender": "Male"
+    "crm__standard_info__phone_2": "90978457"
 }
 ```  
 
