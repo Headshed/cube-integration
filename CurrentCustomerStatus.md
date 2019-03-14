@@ -96,5 +96,5 @@ Read more about how our Pagination works [in the Readme](README.md).
   ```
 
 ## Lookup for crm__custom_info__xx fields
-The crm__custom_info__108 and crm__custom_info__29 fields in this example are custom fields defined on the crm model for the assignment ("My Assignment" in this case).
+The crm__custom_info__1 and crm__custom_info__87 fields in this example are custom fields defined on the crm model for the assignment.
 If you need to know the label/name of this field, you can look it up in the [CustomerCustomFields](https://github.com/Headshed/cube-integration/blob/master/CustomerCustomFields.md "Customer Custom Fields")
