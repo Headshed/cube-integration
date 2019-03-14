@@ -152,7 +152,9 @@ The API will return a > HTTP Response: 200 OK, and a JSON response with all avai
             "crm__custom_info__389": "1832"
         }
   ```
-
+## Lookup for crm__custom_info__xx fields
+The crm__custom_info__17 and crm__custom_info__388 fields in this example are custom fields defined on the crm model for the assignment.
+If you need to know the label/key of this field, you can look it up in the [CustomerCustomFields](https://github.com/Headshed/cube-integration/blob/master/CustomerCustomFields.md "Customer Custom Fields")
 
 ## Customer data API - Updating customer records. (NOT YET IMPLEMENTED)
 The following request can be used to update Customer data records in Cube:
