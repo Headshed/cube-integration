@@ -38,7 +38,7 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 ## Recieving updated Call Outcomes from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of custom call outcome information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
 
-[Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+[Call outcomes data API](https://github.com/Headshed/cube-integration/blob/master/CallOutcomesAPI.md)
 
 ## Recieving updated SMS-records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer including SMS. To retrive SMS history in a campaign or an assignment, use the
