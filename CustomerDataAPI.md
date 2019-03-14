@@ -10,10 +10,10 @@ Cube will return > HTTP Response: 200 OK and a JSON containing a list of custome
 
 **GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/9/customers/```
 
-In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI. (We will add API support for listing assignment information).
-Assignment #9 in this example have been configured as a B2C-assignment (Customer records are consumers), and 6 assignment specific extra information fields have been configured:
+In this example, we have asked for all Customer records in assignment #9. What type of assignment this is can be seen in the Cube GUI.
+Assignment #9 in this example have been configured as a B2C-assignment (Customer records are consumers), and 6 customer custom fields have been configured:
 
-For standard customer data fields, the fields are shown (with `null` values when no data is registered)
+For standard customer fields, the fields are shown (with `null` values when no data is registered)
 
 **Paginated results**
 As the result may contain thousands of customer records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. These will be null when there are no more customers to fetch. 
@@ -117,7 +117,7 @@ The following request can be used to get Customer data from Cube:
 
 The assignment_id and customer_id must be integers.
 
-The API will return a > HTTP Response: 200 OK, and a JSON response with all available customer data, including any extra information fields configured for the assignment.
+The API will return a > HTTP Response: 200 OK, and a JSON response with all available customer data, including any cuistom fields configured for the assignment.
 ### Example response:
 
 ```json  
