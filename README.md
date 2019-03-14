@@ -35,10 +35,10 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 
 [Customer data API](CustomerDataAPI.md)
 
-## Recieving updated Response-records from Cube
-In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of extra response information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
+## Recieving updated Call Outcomes from Cube
+In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of custom call outcome information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
 
-[Response data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+[Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
 
 ## Recieving updated SMS-records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer including SMS. To retrive SMS history in a campaign or an assignment, use the
@@ -89,9 +89,9 @@ def read_customers_test():
     return customer_retrieved
 ```
 ## Example
-This is an example flow to use the API's to retrieve updated response- and customer data from Cube.
+This is an example flow to use the API's to retrieve updated customer- and call outcome data from Cube.
 
 1. Get the campaign- and assignment id's you want to retrieve data for. You can find this in the Cube web-application, or you can use the [Clients-Assignments-Campaigns API](https://github.com/Headshed/cube-integration/blob/master/Clients-Assignments-Campaigns.md) to look them up.
-2. Iterate the list of Campaigns you want to see, gather the Response information you are looking for using the [Response data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
-3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md). You will need the assignment_id. The Response-records and Customer-records will match on ` customer_id `
+2. Iterate the list of Campaigns you want to see, gather the Call Outcome information you are looking for using the [Call Outcome data API](https://github.com/Headshed/cube-integration/blob/master/ResponseDataAPI.md)
+3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md). You will need the assignment_id. The Call Outcome-records and Customer-records will match on ` customer_id `
 4. Transform and store the updated data in your CRM system
