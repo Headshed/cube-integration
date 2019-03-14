@@ -1,12 +1,12 @@
 The following request can be used to get response data from Cube:
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{campaign_id}/responses/?from_date={YYYYMMDD}&to_date={YYYYMMDD}&response_type=Sale```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{campaign_id}/call_outcomes/?from_date={YYYYMMDD}&to_date={YYYYMMDD}&call_outcome_type=Sale```
 
 > HTTP Response: 200 OK
 
 ` {campaign_id} ` is mandatory as a URL parameter.
 ` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one ofthem are not specified.
-`response_type` is an optional parameter to filter the result to a specific response type (e.g. Sale, Offer etc.) 
+`call_outcome_type` is an optional parameter to filter the result to a specific call outcome type (e.g. Sale, Offer etc.) 
 
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
@@ -15,7 +15,7 @@ when there are no more customers to fetch. The default pagination size is 500 (c
 
 
 ### Example response:
-Request example: https://xxx.headshed.com/api/v1/campaigns/926/responses/?from_date=20170101&to_date=20170131&response_type=Sale
+Request example: https://xxx.headshed.com/api/v1/campaigns/926/call_outcomes/?from_date=20170101&to_date=20170131&call_outcome_type=Sale
 
 ```json  
 {
@@ -54,6 +54,6 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/926/responses/?from_d
   ```
 
 ## Note on data prefixes
-As you see from the response, there are prefixed fields like crm__xxx and response__xxx.
+As you see from the returned response, there are prefixed fields like crm__xxx and response__xxx.
 These refer to different parts of the information. The customer information is from the Cube internal CRM (on Assignment), while the response data. 
 The "crm__customer_id" is the imported customer_id field, and NOT the same as the internal "id" field in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
