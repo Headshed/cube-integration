@@ -39,4 +39,8 @@ The result records are is put in a list:
     }    
 ]
   ```
-
+## Lookup for crm__custom_info__xx fields
+You will typically find the values of the custom fields in other API's such as:
+*  [CallOutcomesAPI](https://github.com/Headshed/cube-integration/blob/master/CallOutcomesAPI.md "Call Outcomes API")
+*  [CurrentCustomerStatus](https://github.com/Headshed/cube-integration/blob/master/CurrentCustomerStatus.md "Current Customer Status")
+*  [CustomerDataAPI](https://github.com/Headshed/cube-integration/blob/master/CustomerDataApi.md "Customer Data API")
