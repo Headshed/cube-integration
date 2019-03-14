@@ -57,5 +57,5 @@ These refer to different parts of the information. The customer information is f
 The "crm__customer_id" is the imported customer_id field, and NOT the same as the internal "id" field in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
 
 ## Lookup for crm__custom_info__xx fields
-The crm__custom_info__108 and crm__custom_info__29 fields in this example are custom fileds defined on the crm model for the assignment ("My Assignment" in this case).
-If you need to know the label/name of this field, you can look it up in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
+The crm__custom_info__108 and crm__custom_info__29 fields in this example are custom fields defined on the crm model for the assignment ("My Assignment" in this case).
+If you need to know the label/name of this field, you can look it up in the [CustomerCustomFields](https://github.com/Headshed/cube-integration/blob/master/CustomerCustomFields.md "Customer Custom Fields")
