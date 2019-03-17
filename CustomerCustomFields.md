@@ -22,6 +22,7 @@ The result records are is put in a list:
         "type": "text",
         "max_length": 999,
         "hint": ""
+        "lookup__id": "crm__custom_info__1"        
     },
     {
         "id": 2,
@@ -29,6 +30,7 @@ The result records are is put in a list:
         "type": "text",
         "max_length": 250,
         "hint": ""
+        "lookup__id": "crm__custom_info__2"
     },
     {
         "id": 3,
@@ -36,6 +38,8 @@ The result records are is put in a list:
         "type": "text",
         "max_length": 250,
         "hint": ""
+        "lookup__id": "crm__custom_info__3"    
+        },
     }    
 ]
   ```
