@@ -5,7 +5,7 @@ The following request can be used to get call outcomes data from Cube:
 > HTTP Response: 200 OK
 
 ` {campaign_id} ` is mandatory as a URL parameter.
-` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one ofthem are not specified.
+` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one of them are not specified.
 
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
