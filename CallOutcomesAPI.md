@@ -1,12 +1,11 @@
 The following request can be used to get call outcomes data from Cube:
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{campaign_id}/call_outcomes/?from_date={YYYYMMDD}&to_date={YYYYMMDD}&call_outcome_type=Sale```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{campaign_id}/call_outcomes/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
 
 > HTTP Response: 200 OK
 
 ` {campaign_id} ` is mandatory as a URL parameter.
 ` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one ofthem are not specified.
-`call_outcome_type` is an optional parameter to filter the result to a specific call outcome type (e.g. Sale, Offer etc.) 
 
 ### Pagination
 As the result may contain many responses, we use Pagination to limit the number of results fetched in one go.
@@ -15,12 +14,12 @@ when there are no more customers to fetch. The default pagination size is 500 (c
 
 
 ### Example response:
-Request example: https://xxx.headshed.com/api/v1/campaigns/926/call_outcomes/?from_date=20170101&to_date=20170131&call_outcome_type=Sale
+Request example: https://xxx.headshed.com/api/v1/campaigns/926/call_outcomes/?from_date=20170101&to_date=20170131
 
 ```json  
 {
     "count": 781,
-    "next":   "https://xxxx.headshed.com/api/v1/campaigns/10/call_outcomes/call_outcome_type=Sale&from_date=20190101&page=2&to_date=2019033,
+    "next":   "https://xxxx.headshed.com/api/v1/campaigns/10/call_outcomes/from_date=20190101&page=2&to_date=2019033,
     "previous": null,
     "results": [
         {
