@@ -41,9 +41,9 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/926/call_outcomes/?fr
             "call_outcome__submitted_in_department": "Salgsteam ABC",
             "call_outcome__comment": "",
             "call_outcome__additional_input_text": "",
-            "campaign__name": "My Speislle Kampanje",
+            "campaign__name": "My Campaign",
             "assignment__name": "My Assignment",
-            "client__short_name": "My Klient"
+            "client__short_name": "My Client"
         },
     ........
 ]
