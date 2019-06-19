@@ -2,7 +2,7 @@
 The following request can be used to get Customer data from Cube:
 GET
 ```
-https://YOURACCOUNT.cube4sales.com/crm/assignment_id/{assignment_id}/customers
+https://YOURACCOUNT.headshed.com/crm/assignment_id/{assignment_id}/customers
 ```
 > HTTP Response: 200 OK
 
