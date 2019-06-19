@@ -6,7 +6,7 @@ The following request can be used by internal users to get information about all
 
 GET
 ```
-https://YOURACCOUNT.headshed.com/campaigns
+https://YOURACCOUNT.headshed.com/api/v1/campaigns
 ```
 > HTTP Response: 200 OK
 
@@ -15,7 +15,7 @@ Users with granted access to specific client information (we call them External 
 
 GET
 ```
-https://AGENTACCOUNT.headshed.com/client_access/campaigns
+https://AGENTACCOUNT.headshed.com/api/v1/client_access/campaigns
 ```
 > HTTP Response: 200 OK
 
