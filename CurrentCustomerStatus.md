@@ -1,14 +1,14 @@
 We provide an API to retreive the current customer status for assignments, campaigns and individual customers.
 
 To get the customer status for all customers in an assignment:
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/callflow_customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/callflow_customers```
 
 > HTTP Response: 200 OK
 
 ` {ASSIGNMENT_ID} ` is an integer representing the id of the assignment you want to access.
 
 To get the customer status for all customers in a campaign:
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers```
 
 > HTTP Response: 200 OK
 
@@ -16,7 +16,7 @@ To get the customer status for all customers in a campaign:
 
 
 To get the customer status for all customers in a campaign with a speific call state:
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}```
 
 > HTTP Response: 200 OK
 
