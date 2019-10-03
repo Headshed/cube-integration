@@ -1,4 +1,4 @@
-#Integration with Headshed
+# Integration with Headshed
 
 This is how you integrate with the Headshed Cube REST API. 
 Cube is delivered by [Headshed AS](http://www.headshed.no).
