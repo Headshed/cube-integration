@@ -111,7 +111,7 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/140/call_outcomes/?fr
   ```
 
 ## Note on data prefixes
-As you see from the returned response, there are prefixed fields like crm__xxx and call_outcome__xxx.
+As you see from the returned response, there are prefixed fields like crm xxx and call_outcome__xxx.
 These refer to different parts of the information model. The customer information is from the Cube CRM, while the call outcome data is related to the current campaign. 
 [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
 
