@@ -109,6 +109,7 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/140/call_outcomes/?fr
 ]
 }
   ```
+  
 
 ## Note on data prefixes
 As you see from the returned response, there are prefixed fields like crm xxx and call_outcome__xxx.
