@@ -1,10 +1,16 @@
-The following request can be used to get sms data from Cube for an assignment:
+## Get sms data in CRM
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{assignment_id}/sms/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
+The following request can be used to get sms data from Cube for a CRM:
+
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/data_owners/{data_owner_id}/{crm_type}/sms/?from_date={YYYYMMDD}&to_date={YYYYMMDD}```
 
 > HTTP Response: 200 OK
-` {assignment_id} ` is a mandatory part of the URL.
-` from_date` and ` to_date ` are optional query parameters. The request will return data from "today" if not both date parameters are specified.
+
+` {data_owner_id} ` is mandatory as a URL parameter. 
+` {crm_type} ` is mandatory as a URL parameter. The crm type could be B2C or B2B.
+` from_date` and ` to_date ` are optional query parameters. Will return data from "today" one of them are not specified.
+
+## Get sms data in campaign
 
 The following request can be used to get sms data from Cube for a campaign:
 
@@ -15,12 +21,8 @@ The following request can be used to get sms data from Cube for a campaign:
 `{campaign_id}` is a mandatory URL parameter.
 ` from_date` and ` to_date ` are optional query parameters. The request will return data from "today" if not both date parameters are specified.
 
-### Pagination
-As the result may contain many sms events, we use Pagination to limit the number of results fetched in one go.
-You could read more about how to handle pagination here: [Pagination](https://github.com/LeneHeadshed/cube-integration#pagination-of-get-responses)
 
-
-### Example how to fetch sms events in a campaign:
+### Example response:
 Request example: https://xxx.headshed.com/api/v1/campaigns/15/sms/?from_date=20170101&to_date=20180401
 
 ```json  
@@ -76,10 +78,6 @@ Request example: https://xxx.headshed.com/api/v1/campaigns/15/sms/?from_date=201
 }
   ```
   
-## Note on data prefixes
-As you see from the sms, there are prefixed fields like crm__xxx and sms__xxx.
-These refer to different parts of the information. The customer information is from the Cube internal CRM (on Assignment), while the sms data is fetched from another part of the database. 
-The "crm__customer_id" is the imported customer_id field, and NOT the same as the internal "id" field in the [CustomerData API](https://github.com/Headshed/cube-integration/blob/master/CustomerDataAPI.md "CustomerData API")
 
 
 
