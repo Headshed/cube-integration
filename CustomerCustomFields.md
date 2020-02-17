@@ -39,4 +39,4 @@ Request example: https://xxx.headshed.com/api/v1/data_owners/2/B2C/crm_custom_fi
 You will typically find the values of the custom fields in other API's such as:
 *  [CallOutcomesAPI](https://github.com/Headshed/cube-integration/blob/master/CallOutcomes.md "Call Outcomes")
 *  [CurrentCustomerStatus](https://github.com/Headshed/cube-integration/blob/master/CurrentCustomerStatus.md "Current Customer Status")
-*  [CustomerDataAPI](https://github.com/Headshed/cube-integration/blob/master/CustomerData.md "Customer Data")
+*  [CRMCustomerData](https://github.com/Headshed/cube-integration/blob/master/CRMCustomerData.md "Customer Data")

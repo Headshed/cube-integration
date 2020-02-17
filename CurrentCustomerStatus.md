@@ -1,8 +1,8 @@
-##Current Customer Status
+## Current Customer Status
 
 We provide an API to retreive the current customer status for CRM, Campaigns and individual customers.
 
-###Current customer Status in CRM
+### Current customer Status in CRM
 
 To get the customer status for all customers in a CRM:
 
@@ -15,7 +15,7 @@ To get the customer status for all customers in a CRM:
 `{CRM_TYPE}` is a string representing the name of the crm type you want to access (Available: B2B or B2C).
 
 
-###Current Customer Status in Campaign
+### Current Customer Status in Campaign
 
 To get the customer status for all customers in a campaign:
 

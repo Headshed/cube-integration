@@ -76,6 +76,6 @@ def read_customers_test():
 This is an example flow to use the API's to retrieve updated response- and customer data from Cube.
 
 1. Get the campaign id's you want to retrieve data for. You can find this in the Cube web-application, or you can use the [DataOwners-Campaigns API](https://github.com/Headshed/cube-integration/blob/master/CampaignStructure.md) to look them up.
-2. Iterate the list of Campaigns you want to see, gather the Call outcome information you are looking for using the [Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/CallOutcomeData.md)
-3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API](https://github.com/Headshed/cube-integration/blob/master/CustomerData.md). The Call outcome-records and Customer-records will match on ` customer_id `
+2. Iterate the list of Campaigns you want to see, gather the Call outcome information you are looking for using the [Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/CallOutcomes.md)
+3. If you want more details on the Customer cards, retrieve the Customer data using the [Customer data API](https://github.com/Headshed/cube-integration/blob/master/CRMCustomerData.md). The Call outcome-records and Customer-records will match on ` customer_id `
 4. Transform and store the updated data in your CRM system
