@@ -1,50 +1,42 @@
-## Customer Custom Fields data API - Retrieving all customer custom fields records.
-The following request can be used to get all crm customer custom fields for an assignment in Cube:
+## Customer Custom Fields
+The following request can be used to get all crm customer custom fields for a CRM in Cube:
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/{ASSIGNMENT_ID}/crm_custom_fields/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/data_owners/{data_owner_id}/{crm_type}/crm_custom_fields/```
 
-Cube will return > HTTP Response: 200 OK and a JSON containing a list of customer custom field records similar to the example below.
+> HTTP Response: 200 OK
+
+` {data_owner_id} ` is mandatory as a URL parameter. 
+` {crm_type} ` is mandatory as a URL parameter. The crm type could be B2C or B2B.
 
 
-## Example
+## Example response:
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/assignments/9/crm_custom_fields/```
+Request example: https://xxx.headshed.com/api/v1/data_owners/2/B2C/crm_custom_fields/
 
-In this example, we have asked for all Customer Custom Field records in assignment #9. What type of assignment this is can be seen in the Cube GUI.
-Assignment #9 in this example have been configured with 3 custom fields.
-The result records are is put in a list:
 
 ```json  
 [
     {
-        "id": 1,
-        "key": "active products",
-        "type": "text",
-        "max_length": 999,
-        "hint": ""
-        "lookup__id": "crm__custom_info__1"        
-    },
-    {
-        "id": 2,
-        "key": "Previous bank",
+        "id": 64,
+        "key": "Address street",
         "type": "text",
         "max_length": 250,
-        "hint": ""
-        "lookup__id": "crm__custom_info__2"
+        "hint": "",
+        "lookup__id": "crm__custom_info__64"     
     },
     {
-        "id": 3,
-        "key": "Bonus programme",
+        "id": 221,
+        "key": "Adresse",
         "type": "text",
-        "max_length": 250,
-        "hint": ""
-        "lookup__id": "crm__custom_info__3"    
-        },
+        "max_length": 200,
+        "hint": "",
+        "lookup__id": "crm__custom_info__221"
+    },
     }    
 ]
   ```
 ## Lookup for crm__custom_info__xx fields
 You will typically find the values of the custom fields in other API's such as:
-*  [CallOutcomesAPI](https://github.com/Headshed/cube-integration/blob/master/CallOutcomesAPI.md "Call Outcomes API")
+*  [CallOutcomesAPI](https://github.com/Headshed/cube-integration/blob/master/CallOutcomes.md "Call Outcomes")
 *  [CurrentCustomerStatus](https://github.com/Headshed/cube-integration/blob/master/CurrentCustomerStatus.md "Current Customer Status")
-*  [CustomerDataAPI](https://github.com/Headshed/cube-integration/blob/master/CustomerDataApi.md "Customer Data API")
+*  [CRMCustomerData](https://github.com/Headshed/cube-integration/blob/master/CRMCustomerData.md "Customer Data")
