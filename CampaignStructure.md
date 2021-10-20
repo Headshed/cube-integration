@@ -10,15 +10,6 @@ https://YOURACCOUNT.headshed.com/api/v1/campaigns
 > HTTP Response: 200 OK
 
 
-### External users
-Users with granted access to specific data owner information (we call them External users) can use the following API request to get information about available Campaigns in Cube:
-
-GET
-```
-https://AGENTACCOUNT.headshed.com/api/v1/client_access/campaigns
-```
-> HTTP Response: 200 OK
-
 ### Example response:
 ```json  
 [
