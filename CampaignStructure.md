@@ -1,7 +1,6 @@
 ## List all campaigns in Cube
 
-### Internal users
-The following request can be used by internal users to get information about all Campaigns in Cube:
+The following request can be used to get information about all Campaigns in Cube:
 
 GET
 ```
