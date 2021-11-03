@@ -61,14 +61,14 @@ def read_customers_test():
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
     headers['Authorization'] = 'Token INSERT_YOUR_API_TOKEN_HERE'
     url = 'https://demo.headshed.com/api/v1/campaigns/100/callflow_customers/'
-    customer_retrieved = []
+    customers_retrieved = []
 
     response = requests.get(url=url, headers=headers)
-    customer_retrieved.extend(response.json().get('results'))
+    customers_retrieved.extend(response.json().get('results'))
 
     while response.json().get('next') is not None:
         response = requests.get(url=response.json().get('next'), headers=headers)
-        customer_retrieved.extend(response.json().get('results'))
+        customers_retrieved.extend(response.json().get('results'))
 
     return customer_retrieved
 ```
