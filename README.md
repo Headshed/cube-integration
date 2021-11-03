@@ -59,7 +59,7 @@ import requests
 
 def read_customers_test():
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-    headers['Authorization'] = 'Basic bGlwcGUuc2xvcmRhbAAAAAAAAAAAAAAmQwOQ=='
+    headers['Authorization'] = 'Token INSERT_YOUR_API_TOKEN_HERE'
     url = 'https://demo.headshed.com/api/v1/campaigns/100/callflow_customers/'
     customer_retrieved = []
 
