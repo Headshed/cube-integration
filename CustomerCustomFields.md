@@ -20,7 +20,7 @@ Request example: https://xxx.headshed.com/api/v1/data_owners/2/B2C/crm_custom_fi
         "id": 64,
         "key": "Address street",
         "type": "text",
-        "max_length": 250,
+        "max_length": 200,
         "hint": "",
         "lookup__id": "crm__custom_info__64"     
     },
