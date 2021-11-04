@@ -16,19 +16,23 @@ Request example: https://xxx.headshed.com/api/v1/data_owners/2/B2C/crm_custom_fi
 
 ```json  
 [
-    {
+{
         "id": 64,
         "key": "Address street",
-        "data__type": "text",
+        "type": "text",
+        "max_length": 250,
+        "hint": "",
         "lookup__id": "crm__custom_info__64"     
     },
     {
         "id": 221,
         "key": "Adresse",
-        "data__type": "text",
+        "type": "text",
+        "max_length": 200,
+        "hint": "",
         "lookup__id": "crm__custom_info__221"
     },
-    }    
+    }       
 ]
   ```
 ## Lookup for crm__custom_info__xx fields
