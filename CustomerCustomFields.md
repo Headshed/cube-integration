@@ -19,17 +19,13 @@ Request example: https://xxx.headshed.com/api/v1/data_owners/2/B2C/crm_custom_fi
     {
         "id": 64,
         "key": "Address street",
-        "type": "text",
-        "max_length": 250,
-        "hint": "",
+        "data__type": "text",
         "lookup__id": "crm__custom_info__64"     
     },
     {
         "id": 221,
         "key": "Adresse",
-        "type": "text",
-        "max_length": 200,
-        "hint": "",
+        "data__type": "text",
         "lookup__id": "crm__custom_info__221"
     },
     }    
