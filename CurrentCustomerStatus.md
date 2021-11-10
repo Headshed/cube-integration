@@ -19,7 +19,7 @@ To get the customer status for all customers in a CRM:
 
 To get the customer status for all customers in a campaign:
 
-**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}/```
+**GET** ```https://YOURACCOUNT.headshed.com/api/v1/campaigns/{CAMPAIGN_ID}/callflow_customers/?call_state={CALL_STATE_CODE}```
 
 > HTTP Response: 200 OK
 
