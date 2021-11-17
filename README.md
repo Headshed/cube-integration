@@ -22,7 +22,7 @@ To investigate the properties of your Data Owners and Campaigns you can use the 
 ## Recieving updated CRM records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. When in contact with the customer, the Cube user can update the Customer information in Cube with e.g. a new phone number, email address, changed last name etc. To retreive the updated CRM information, use the
 
-[Customer data API](CustomerData.md)
+[Customer data API](https://github.com/Headshed/cube-integration/blob/master/CRMCustomerData.md)
 
 ## Recieving updated Call Outcome-records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of custom information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
