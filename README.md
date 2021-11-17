@@ -27,7 +27,7 @@ In a typical use-case scenario, Cube is used to register all contact with a cust
 ## Recieving updated Call Outcome-records from Cube
 In a typical use-case scenario, Cube is used to register all contact with a customer. Configuration of custom information fields is done pr. Campaign in Cube, and the data is grouped by Campaign.
 
-[Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/CallOutcomeData.md)
+[Call outcome data API](https://github.com/Headshed/cube-integration/blob/master/CallOutcomes.md)
 
 ## Pagination of GET responses
 Since the result of a GET request for may contain thousands of records, we use Pagination to limit the number of results fetched in one go. The json response returned will have links (next/previous) you can use to navigate the results. The ``next`` link will be null when there are no more customers to fetch. The result records are is put in a list (``results``).
