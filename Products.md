@@ -57,7 +57,7 @@ Request example: https://xxx.headshed.com/api/v1/data_owners/2/crm/B2C/product_r
             "call_outcome__extra__Leveransedato": "",
             "call_outcome__extra__Lol": "",
             "call_outcome__extra__Kunnskap": "",
-            "call_outcome__additional_input_text": "Followup time: Between 28.11.2018 08:00 and 28.11.2018 21:00 \nMeeting: 28-11-2018 10:00 - 12:00 with lene@headshed.com  \n",
+            "call_outcome__additional_input_text": "",
             "campaign__name": "My Booking Campaign",
             "campaign__crm_type": "B2C",
             "data_owner__name": "Demo Client",
