@@ -8,6 +8,8 @@ https://YOURACCOUNT.headshed.com/api/v1/campaigns
 ```
 > HTTP Response: 200 OK
 
+#### Deprecated warning
+campaign__end_date and campaign__start_date is deprecated. Please contact Headshed Support (support@headshed.com) if you use these properties. 
 
 ### Example response:
 ```json  
