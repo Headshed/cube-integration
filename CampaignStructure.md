@@ -22,6 +22,8 @@ campaign__end_date and campaign__start_date is deprecated. Please contact Headsh
         "campaign__archived_date": "2020-01-30",
         "campaign__is_active": "",
         "campaign__crm_type": "B2C",
+        "service__id": 2,
+        "service__name": "Meetings",
         "data_owner__id": 1,
         "data_owner__name": "Client"
     },
@@ -33,6 +35,8 @@ campaign__end_date and campaign__start_date is deprecated. Please contact Headsh
         "campaign__archived_date": "",
         "campaign__is_active": true,
         "campaign__crm_type": "B2C",
+        "service__id": 3,
+        "service__name": "Product sales",
         "data_owner__id": 1,
         "data_owner__name": "Client"
     }
